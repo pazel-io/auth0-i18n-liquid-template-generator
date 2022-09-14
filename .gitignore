@@ -4,3 +4,5 @@ node_modules
 
 #osx
 .DS_Store
+
+src/build
