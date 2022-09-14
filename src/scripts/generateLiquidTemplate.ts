@@ -22,9 +22,8 @@ const getStarted = () => {
 }
 
 export const generateEmailTemplate = () => {
-    const template = `
+    return `
         ${welcomeMessage()}
         ${getStarted()}
     `
-    console.log('template', template)
 }
