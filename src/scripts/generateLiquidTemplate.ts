@@ -1,5 +1,5 @@
-import * as en from './en.json';
-import * as fr from './fr.json';
+import * as en from '../languages/en.json';
+import * as fr from '../languages/fr.json';
 
 const messageByLanguage = (messageKey: string, prefix?: string, postfix?: string) => {
     return `
