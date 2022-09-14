@@ -1,0 +1,1 @@
+# auth0-i18n-liquid-template-generator
