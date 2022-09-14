@@ -1,0 +1,6 @@
+{
+    "title": "Bienvenue au programme, nous faisons de grandes choses",
+    "welcomeMessage": "Bonjour {{user}} Bienvenue sur le site",
+    "getStarted": "pour commencer à utiliser le site connectez-vous",
+    "loginButtonText": "Connexion"
+}

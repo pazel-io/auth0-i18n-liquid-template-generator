@@ -1,0 +1,6 @@
+{
+    "title": "Welcome to the program, we make great things happen",
+    "welcomeMessage": "Hello {{user}} Welcome to the site",
+    "getStarted": "to get started with the site login",
+    "loginButtonText": "Login"
+}
