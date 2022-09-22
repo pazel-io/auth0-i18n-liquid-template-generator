@@ -2,6 +2,10 @@
 
 This is a tool to generate the HTML/Liquid templates for the Auth0 Email Templates so we can easily translate for different languages.
 
+There is a blog post which describes this solution in more details:
+
+https://pazel.dev/use-json-to-localizetranslate-auth0-email-templates-based-on-user-language
+
 ## How to add a new Template
 
 1. Create a new file in the `src/templates` folder. The file name should be the same as the template name in Auth0 for easy reference.
