@@ -1,15 +1,11 @@
-import { generateEmailTemplate } from './generateLiquidTemplate';
-import * as fs from 'fs-extra';
+import { writeFile } from "./writeFile";
+export { localizeMessage } from "./localizeMessage";
+export { writeFile } from "./writeFile";
 
-const emailTemplate = generateEmailTemplate();
+const templates = ["verification-email"];
 
-// Write emailTemplate to file
-try {
-    fs.removeSync('./output');
-    fs.mkdirSync('./output', { recursive: true });
-    fs.writeFileSync('output/emailTemplate.liquid', emailTemplate, {
-        encoding: 'utf8',
-    });
-} catch (err) {
-    console.error(err)
-}
+templates.forEach((template) => {
+    const templateContent = require(`../templates/${template}`).default;
+    console.log(templateContent);
+    writeFile(template, templateContent);
+});
