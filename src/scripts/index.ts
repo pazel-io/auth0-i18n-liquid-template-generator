@@ -12,7 +12,26 @@ if (languages.length === 0) {
     throw new Error("No languages found");
 }
 
-templates.forEach((template) => {
-    const templateContent = require(`../templates/${template}`).default;
-    writeFile(template, templateContent);
-});
+const validateHTML = async (templateContent: string) => {
+    const validator = require("html-validator");
+    const options = {
+        data: templateContent,
+        format: "text",
+    };
+    try {
+        const result = await validator(options);
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const generateTemplates = async () => {
+    for (const template of templates) {
+        const templateContent = require(`../templates/${template}`).default;
+        // await validateHTML(templateContent);
+        writeFile(template, templateContent);
+    }
+};
+
+generateTemplates();

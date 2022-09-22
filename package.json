@@ -12,12 +12,11 @@
         "typescript": "^3.9.7"
     },
     "scripts": {
-        "clean": "rm -rf ./build & rm -rf ./output",
+        "clean": "rm -rf ./build",
         "copy-languages": "mkdir -p ./build/languages && cp -r ./src/languages/* ./build/languages",
         "build": "npm run clean && tsc && npm run copy-languages",
         "watch": "tsc -w",
-        "generate": "node ./build/scripts/index.js",
-        "serve": "npm run build && npm run generate && serve ./output",
-        "test": "html-validator --file ./dist/index.html"
+        "generate": "rm -rf ./output && node ./build/scripts/index.js",
+        "serve": "npm run build && npm run generate && serve ./output"
     }
 }
