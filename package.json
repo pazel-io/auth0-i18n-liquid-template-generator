@@ -18,7 +18,6 @@
         "watch": "tsc -w",
         "generate": "node ./build/scripts/index.js",
         "serve": "npm run build && npm run generate && serve ./output",
-        "test": "html-validator --file ./dist/index.html",
-        "publish": "npm run build && npm run generate && npm run test"
+        "test": "html-validator --file ./dist/index.html"
     }
 }

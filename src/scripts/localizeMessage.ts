@@ -1,4 +1,5 @@
-const languages = ["en", "fr", "jp"];
+import { languages } from "../languages";
+
 
 const loadLanguageJson = (language: string) => require(`../languages/${language}.json`);
 
